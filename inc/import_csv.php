@@ -136,7 +136,7 @@ class Maxmind_csv_import {
 		$file = $this->config['file'];
 
 		// prepare query
-		$sql = "load data infile '$file' into table csv fields terminated by ',' (start_ip, end_ip, `start`, `end`, cc, cn)";
+		$sql = "load data local infile '$file' into table csv fields terminated by ',' (start_ip, end_ip, `start`, `end`, cc, cn)";
 
 		// run the query
 		$query = $this->mysqli->query($sql);
